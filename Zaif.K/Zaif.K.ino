@@ -1,4 +1,4 @@
-Author: Zaif K
+//Author: Zaif K
 /*
   Purpose: Basic example of the Seead Ultrasonic Ranger module
   Notes: Connect to a digital PIN  7
@@ -9,7 +9,7 @@ Author: Zaif K
 //Starts to initiate ultrasonic sensor
 #include "Ultrasonic.h"
 
-Ultrasonic ultrasonic(7);
+Ultrasonic distanceSensor(7);
 void setup()
 {
  Serial.begin(9600);
@@ -22,9 +22,9 @@ void loop()
 
  //Serial.println("The distance to obstacles in front is: ");
 
- RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
+ RangeInCentimeters = distanceSensor.MeasureInCentimeters(); // two measurements should keep an interval
  Serial.print(RangeInCentimeters);//0~400cm
- Serial.println(" cm");
+ Serial.println(" 5 cm");
  delay(250); //wait 250 milliseconds
 }
 
@@ -37,3 +37,4 @@ Step 3. Plug Grove - Base Shield into Seeeduino.
 Step 4. Connect Seeeduino to PC via a USB cable.
 
 */
+
