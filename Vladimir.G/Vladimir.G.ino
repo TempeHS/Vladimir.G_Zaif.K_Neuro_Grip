@@ -28,11 +28,12 @@ void loop()
 
     delay(15); // wait 15 milliseconds            
   }
-  for (pos = 180; pos >= 0; pos -= 1) // change in position with math
+  for (pos = 180; pos >= 0; pos -= 1) // change in position
   {
     myservo1.write(pos);
     myservo2.write(pos);
     myservo3.write(pos);
+    
     delay(15); // wait 15 milliseconds       
   }
 }
