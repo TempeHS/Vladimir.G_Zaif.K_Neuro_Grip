@@ -1,7 +1,5 @@
 //Author: Vladimir-G 20/11/24 - ../12/24
 
-
-
 #include <Servo.h> // library
 
 Servo myservo1; // asign name
@@ -18,10 +16,11 @@ void setup()
 }
 
 //change void loop to be measured when to move servo motors by read measurement of ultrasonic sensor
-void loop() 
+
+void loop()
 {
   for (pos = 0; pos <= 180; pos += 1) // change in position
-  { 
+  {           
     myservo1.write(pos);
     myservo2.write(pos);
     myservo3.write(pos);
@@ -38,6 +37,3 @@ void loop()
 }
 
 
-/*
-
-*/

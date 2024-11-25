@@ -15,17 +15,18 @@ US sensor pin 7
 
 Ultrasonic distanceSensor(7);
 
-Servo myservo1;
-Servo myservo2;
-Servo myservo3;
+  myservo1.attach(3);
+  myservo2.attach(4);
+  myservo3.attach(5);
 
 int pos = 0;
 
 void setup()
 {
-  myservo1.attach(3);
-  myservo2.attach(4);
-  myservo3.attach(5);
+  int Range;
+  Range = distanceSensor.distanceRead();
+  Serial.print(Range);
+  Serial.print("cm");
 }
 
 void loop()
