@@ -1,6 +1,6 @@
 /*
-    Ultrasonic.h
-    A library for ultrasonic ranger
+    UltrasonicDisplayOnTerm.ino
+    Example sketch for ultrasonic ranger
 
     Copyright (c) 2012 seeed technology inc.
     Website    : www.seeed.cc
@@ -28,20 +28,34 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 */
-#ifndef Ultrasonic_H
-#define Ultrasonic_H
 
-#include "Arduino.h"
 
-class Ultrasonic {
-  public:
-    Ultrasonic(int pin);
-    long MeasureInCentimeters(uint32_t timeout = 1000000L);
-    long MeasureInMillimeters(uint32_t timeout = 1000000L);
-    long MeasureInInches(uint32_t timeout = 1000000L);
-  private:
-    int _pin;//pin number of Arduino that is connected with SIG pin of Ultrasonic Ranger.
-    long duration(uint32_t timeout = 1000000L);
-};
+/***************************************************************************/
+//	Function: Measure the distance to obstacles in front and print the distance
+//			  value to the serial terminal.The measured distance is from
+//			  the range 0 to 400cm(157 inches).
+//	Hardware: Grove - Ultrasonic Ranger
+//	Arduino IDE: Arduino-1.0
+/*****************************************************************************/
 
-#endif
+#include "Ultrasonic.h"
+
+Ultrasonic ultrasonic(7);
+void setup() {
+    Serial.begin(9600);
+}
+void loop() {
+    long RangeInInches;
+    long RangeInCentimeters;
+
+    Serial.println("The distance to obstacles in front is: ");
+    RangeInInches = ultrasonic.MeasureInInches();
+    Serial.print(RangeInInches);//0~157 inches
+    Serial.println(" inch");
+    delay(250);
+
+    RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
+    Serial.print(RangeInCentimeters);//0~400cm
+    Serial.println(" cm");
+    delay(250);
+}
