@@ -53,7 +53,11 @@ void loop()
 }
 */
 #include <Servo.h>
+<<<<<<< HEAD
 #include "Ultrasonic.h"
+=======
+#include
+>>>>>>> a254f5e4fdc6a17ebb28701df9fa942066e7be38
 
 // constants won't change
 // const int TRIG_PIN  = 6;  // Arduino pin connected to Ultrasonic Sensor's TRIG pin
