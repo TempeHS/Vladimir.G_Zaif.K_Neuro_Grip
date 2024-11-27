@@ -14,10 +14,19 @@ US sensor pin 7
 #include "Ultrasonic.h"
 
 Servo myservo1;
+<<<<<<< Updated upstream
 Servo myservo2;
 Servo myservo3;
 
 Ultrasonic distanceSensor(7);
+=======
+
+Ultrasonic distanceSensor(7);
+
+myservo1.attach(3);
+myservo2.attach(4);
+myservo3.attach(5);
+>>>>>>> Stashed changes
 
 int pos = 0;
 
