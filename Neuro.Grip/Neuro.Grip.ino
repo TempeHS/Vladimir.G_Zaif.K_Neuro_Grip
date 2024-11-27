@@ -26,16 +26,20 @@ void setup()
   myservo1.attach(3);
   myservo2.attach(4);
   myservo3.attach(5);
-
+  Serial.begin(9600);
 }
 
 void loop()
+
+
 {
   long RangeInCentimeters;
   RangeInCentimeters = distanceSensor.MeasureInCentimeters();
   Serial.print(RangeInCentimeters);
-  Serial.print("cm");
+  Serial.println("cm");
+
 }
+
 
 
 
