@@ -13,25 +13,28 @@ US sensor pin 7
 #include <Servo.h>
 #include "Ultrasonic.h"
 
-Ultrasonic distanceSensor(7);
+Servo myservo1;
+Servo myservo2;
+Servo myservo3;
 
-  myservo1.attach(3);
-  myservo2.attach(4);
-  myservo3.attach(5);
+Ultrasonic distanceSensor(7);
 
 int pos = 0;
 
 void setup()
 {
-  int Range;
-  Range = distanceSensor.distanceRead();
-  Serial.print(Range);
-  Serial.print("cm");
+  myservo1.attach(3);
+  myservo2.attach(4);
+  myservo3.attach(5);
+
 }
 
 void loop()
 {
-
+  long RangeInCentimeters;
+  RangeInCentimeters = distanceSensor.MeasureInCentimeters();
+  Serial.print(RangeInCentimeters);
+  Serial.print("cm");
 }
 
 
