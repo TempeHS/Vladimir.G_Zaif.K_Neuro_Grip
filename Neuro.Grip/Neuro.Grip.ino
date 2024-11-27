@@ -14,7 +14,6 @@ US sensor pin 7
 #include "Ultrasonic.h"
 
 Servo myservo1;
-<<<<<<< Updated upstream
 Servo myservo2;
 Servo myservo3;
 
@@ -43,10 +42,10 @@ void loop()
   Serial.print("cm");
 
   if (distanceSensor(>=5))
-  armclose();
+  handclose();
 
     if (distanceSensor(<=5))
-  armopen();
+  handopen();
 }
 
 
