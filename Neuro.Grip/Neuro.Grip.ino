@@ -44,6 +44,8 @@ void loop()
   RangeInCentimeters = distanceSensor.MeasureInCentimeters();
   Serial.print(RangeInCentimeters);
   Serial.print("cm");
+
+  if ()
 }
 
 
