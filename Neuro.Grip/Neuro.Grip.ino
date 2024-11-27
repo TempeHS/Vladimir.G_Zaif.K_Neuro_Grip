@@ -19,9 +19,6 @@ Servo myservo2;
 Servo myservo3;
 
 Ultrasonic distanceSensor(7);
-=======
-
-Ultrasonic distanceSensor(7);
 
 myservo1.attach(3);
 myservo2.attach(4);
@@ -39,13 +36,21 @@ void setup()
 }
 
 void loop()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9fb15f293fedc44de32a4f7e3d97a9fee7e50315
 {
   long RangeInCentimeters;
   RangeInCentimeters = distanceSensor.MeasureInCentimeters();
   Serial.print(RangeInCentimeters);
-  Serial.println("cm");
+  Serial.print("cm");
 
+  if (distanceSensor(>=5))
+  armclose();
+
+    if (distanceSensor(<=5))
+  armopen();
 }
 
 //#include <Servo.h>
