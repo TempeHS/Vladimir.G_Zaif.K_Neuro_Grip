@@ -51,8 +51,8 @@ void loop()
     if (distanceSensor(<=5))
   handopen();
 }
-
-//#include <Servo.h>
+*/
+#include <Servo.h>
 
 // constants won't change
 const int TRIG_PIN  = 6;  // Arduino pin connected to Ultrasonic Sensor's TRIG pin
