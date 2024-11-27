@@ -1,4 +1,4 @@
-void servosetup() {
+/*void servosetup() {
   myservo1.attach(3);
   myservo2.attach(4);
   myservo3.attach(5); // asign pins
@@ -21,3 +21,4 @@ void servorun() {
     delay(15); // wait 15 milliseconds       
   }
 }
+*/

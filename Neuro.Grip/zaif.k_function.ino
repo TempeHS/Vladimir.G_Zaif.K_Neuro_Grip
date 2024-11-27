@@ -1,6 +1,7 @@
+/*
 void ultrasonicrun() {
-   long RangeInCentimeters;
- long RangeInInches;
+  long RangeInCentimeters;
+  long RangeInInches;
 
  Serial.println("The distance to obstacles in front is: ");
 
@@ -15,3 +16,4 @@ void ultrasonicrun() {
  Serial.println(" inch");
  delay(250);
 }
+*/
