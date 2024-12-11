@@ -101,14 +101,18 @@ void loop() {
 
 //adding commands
 
-if ()
+if () {
   OpenArm;
+}
 
-if ()
+if () {
   CloseArm;
+}
 
-if ()
+if () {
   HalfOpenArm;
+}
 
-if ()
+if () {
   HalfCloseArm;
+}
